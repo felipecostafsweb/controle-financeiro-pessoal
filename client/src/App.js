@@ -121,7 +121,7 @@ export default function App() {
         </Button>
       </div>
       <div style={styles.summaryStyle}>
-        <Summary transactions={selectedTransactions} />
+        <Summary transactions={filteredTransactions} />
       </div>
       <div style={styles.container2}>
         <Button
