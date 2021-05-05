@@ -3,13 +3,13 @@ import React from 'react';
 export default function DateForm({
   periodsAndNames,
   onSelect,
-  onClick,
   currentPeriod,
+  currentId,
 }) {
   const handleSelectChange = ({ currentTarget }) => {
     onSelect(currentTarget.value);
   };
-  console.log(onClick);
+
   return (
     <div>
       <div className="input-field ">
@@ -23,8 +23,8 @@ export default function DateForm({
             return (
               <option
                 key={entry.id}
-                value={entry.period}
-                selected={entry.period === currentPeriod ? true : false}
+                value={entry.id}
+                selected={entry.id === currentId ? true : false}
               >
                 {entry.periodName}
               </option>

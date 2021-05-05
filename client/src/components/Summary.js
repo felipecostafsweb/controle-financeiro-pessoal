@@ -1,5 +1,4 @@
 import React from 'react';
-import { formatNumber } from '../helpers/formatHelpers';
 import Info from './Info';
 
 export default function Summary({ transactions }) {
