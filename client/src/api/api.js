@@ -14,6 +14,11 @@ const fetchAll = async () => {
   return res.data;
 };
 
+const deleteTransaction = async (id) => {
+  const REQ_URL = `/remove?id=${id}`;
+  await axios.delete(`${BASE_URL}${REQ_URL}`);
+};
+
 const nameOf = (month) => {
   switch (month) {
     case '01':
@@ -44,4 +49,4 @@ const nameOf = (month) => {
       return '';
   }
 };
-export { fetchTransactions, fetchAll, nameOf };
+export { fetchTransactions, fetchAll, nameOf, deleteTransaction };

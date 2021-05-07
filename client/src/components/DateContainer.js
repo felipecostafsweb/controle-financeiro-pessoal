@@ -20,7 +20,7 @@ export default function DateContainer({
     <div style={styles.container}>
       <Button
         style={styles.btn}
-        className="waves-effect waves-light btn"
+        className="btn"
         type="icon"
         onClick={handleButtonClick}
       >
@@ -35,7 +35,7 @@ export default function DateContainer({
 
       <Button
         style={styles.btn}
-        className="waves-effect waves-light btn"
+        className="btn"
         type="icon"
         onClick={handleButtonClick}
       >

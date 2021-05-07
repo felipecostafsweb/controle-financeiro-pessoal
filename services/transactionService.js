@@ -32,8 +32,8 @@ const removeTransaction = async (req, res) => {
   const id = req.query.id;
 
   try {
-    await TRANSACTION.findByIdAndRemove({ _id: id });
-    res.send('Transação deletada');
+    await TRANSACTION.findByIdAndRemove(id);
+    res.end();
   } catch (error) {
     res.status(500).send('Erro ao remover transação' + error);
   }
