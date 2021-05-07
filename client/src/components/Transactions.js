@@ -3,8 +3,9 @@ import Transaction from './Transaction';
 
 export default function Transactions({ transactions, onBtnClick }) {
   transactions.sort((a, b) => a.day - b.day);
-  const handleButtonClick = (target) => {
-    onBtnClick(target);
+
+  const handleButtonClick = (target, id) => {
+    onBtnClick(target, id);
   };
 
   return (

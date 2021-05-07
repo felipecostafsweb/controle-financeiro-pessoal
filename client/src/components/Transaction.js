@@ -11,13 +11,13 @@ export default function Transaction({
   day,
   onBtnClick,
 }) {
-  const handleButtonClick = (target) => {
-    onBtnClick(target);
+  const handleButtonClick = (target, id) => {
+    onBtnClick(target, id);
   };
 
   return (
     <div
-      className={`waves-effect waves-light card horizontal ${
+      className={` card horizontal ${
         type === '+' ? 'green accent-1' : 'red accent-1'
       } `}
       style={styles.cardContainer}
@@ -34,6 +34,7 @@ export default function Transaction({
           type="icon"
           className={` ${type === '+' ? 'green accent-1' : 'red accent-1'} `}
           onClick={handleButtonClick}
+          id={id}
         >
           edit
         </Button>
@@ -42,6 +43,7 @@ export default function Transaction({
           type="icon"
           className={` ${type === '+' ? 'green accent-1' : 'red accent-1'} `}
           onClick={handleButtonClick}
+          id={id}
         >
           delete
         </Button>
